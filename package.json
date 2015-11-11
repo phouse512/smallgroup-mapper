@@ -1,0 +1,24 @@
+{
+  "name": "smallgroup-mapper",
+  "version": "1.0.0",
+  "description": "A node app built with webpack, the google spreadsheets/maps API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack ./lib/index.js bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phouse512/smallgroup-mapper.git"
+  },
+  "author": "Philip House",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phouse512/smallgroup-mapper/issues"
+  },
+  "homepage": "https://github.com/phouse512/smallgroup-mapper",
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "webpack": "^1.12.4"
+  }
+}
