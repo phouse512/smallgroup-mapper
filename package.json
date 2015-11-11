@@ -20,5 +20,9 @@
   "devDependencies": {
     "http-server": "^0.8.5",
     "webpack": "^1.12.4"
+  },
+  "dependencies": {
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^2.1.6"
   }
 }
