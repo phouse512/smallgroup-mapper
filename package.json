@@ -19,10 +19,14 @@
   "homepage": "https://github.com/phouse512/smallgroup-mapper",
   "devDependencies": {
     "http-server": "^0.8.5",
+    "json-loader": "^0.5.3",
     "webpack": "^1.12.4"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "google-auth-library": "^0.9.7",
-    "googleapis": "^2.1.6"
+    "googleapis": "^2.1.6",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
   }
 }

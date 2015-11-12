@@ -1,3 +1,5 @@
 node_modules
 bundle.js
-client_secret.json
+driveclient_secret.json
+driveAccessToken.json
+*.swp
