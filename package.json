@@ -27,6 +27,7 @@
     "google-auth-library": "^0.9.7",
     "googleapis": "^2.1.6",
     "jquery": "^2.1.4",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "request": "^2.65.0"
   }
 }
