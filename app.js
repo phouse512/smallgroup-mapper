@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 
 var spreadsheet = require('./lib/spreadsheet');
+var map = require('./lib/map');
 
 app.use(express.static('public'));
 
@@ -13,7 +14,19 @@ app.get('/', function (req, res) {
 
 app.get('/_get_spreadsheet', function(req, res) {
     spreadsheet.getSpreadsheet(function(data) {
-        res.send(data);
+        console.log(typeof(data));
+
+        map.geocodeAddresses(data, function(userLocations) {
+          console.log('made it!');
+          console.log(userLocations);
+          res.send(userLocations);
+        });
+    });
+});
+
+app.get('/_test_geolocation', function(req, res) {
+    map.geocodeAddresses('phil', '1700 Hinman Ave, Evanston IL', false, function(workDict, homeDict) {
+        console.log(homeDict);
     });
 });
 
