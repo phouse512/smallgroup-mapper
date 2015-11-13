@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
 var spreadsheet = require('./lib/spreadsheet');
 
+app.use(express.static('public'));
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+//  res.send('Hello World!');
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.get('/_get_spreadsheet', function(req, res) {
