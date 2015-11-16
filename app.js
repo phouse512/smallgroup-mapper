@@ -24,12 +24,6 @@ app.get('/_get_spreadsheet', function(req, res) {
     });
 });
 
-app.get('/_test_geolocation', function(req, res) {
-    map.geocodeAddresses('phil', '1700 Hinman Ave, Evanston IL', false, function(workDict, homeDict) {
-        console.log(homeDict);
-    });
-});
-
 var server = app.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;
