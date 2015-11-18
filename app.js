@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var uuid = require('node-uuid');
 
 var spreadsheet = require('./lib/spreadsheet');
 var map = require('./lib/map');
@@ -16,7 +17,9 @@ app.get('/_get_spreadsheet', function(req, res) {
     spreadsheet.getSpreadsheet(function(data) {
         console.log(typeof(data));
 
-        map.geocodeAddresses(data, function(userLocations) {
+        uniqueId = uuid.v1();
+        console.log(uniqueId);
+        map.geocodeAddresses(uniqueId, data, function(userLocations) {
           console.log('made it!');
           console.log(userLocations);
           res.send(userLocations);
