@@ -18,18 +18,27 @@
     <script type="text/javascript" src="js/bundle.js"></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
     <div class="row">
-      <div class="col-lg-2 col-lg-offset-1">
-        <h3>User Info will go here:</h3>
+      <div class="col-lg-4">
+        <h3>Members:</h3>
+          <div id="userList" class="list-group">
+          </div>
       </div>
       <div class="col-lg-8"> 
-        <div style="height: 600px; width: 1000px;" id="map"></div>
+        <div style="height: 600px; width: 900px; margin-top: 20px;" id="map"></div>
       </div>
 
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>-->
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOKTFdleWHh9YpvmZjL7fwgWUMU4SpxVI&callback=index.initMap">
+    </script>
+
+    <script id="name-template" type="text/x-handlebars-template">
+      <a href="#" class="list-group-item userObject" data-user="{{ name }}">
+        <h5 class="list-group-item-heading">{{ name }}</h5>
+        <p class="list-group-item-text"><b>Home: </b>{{ homeAddress }}</p>
+        <p class="list-group-item-text"><b>Work: </b>{{ workAddress }}</p>
+      </a>
     </script>
   </body>
 </html>
